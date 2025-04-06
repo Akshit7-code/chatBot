@@ -17,7 +17,7 @@ function App() {
     setLoading(true);
 
     setTimeout(async () => {
-      const res = await axios.post('http://localhost:5000/chat', { message: msg });
+      const res = await axios.post('https://chatbot-backend-3-kqah.onrender.com/chat', { message: msg });
       setChat(prev =>
         prev.map((c, i) =>
           i === prev.length - 1 ? { ...c, bot: res.data.response } : c
